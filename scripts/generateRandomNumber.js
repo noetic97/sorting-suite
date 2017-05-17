@@ -1,10 +1,10 @@
 function generateRandomNumber (count) {
-  var numArray = [];
+  let numArray = [];
 
-  for (let i = 0; i < count.length; i++) {
-    numArray.push( Math.floor( Math.random() * 1000) );
+  for (let i = 0; i < count; i++) {
+    numArray.push( Math.floor( Math.random() * 10000) );
   }
-  console.log(numArray);
+
   return numArray;
 }
 
