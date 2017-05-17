@@ -32,9 +32,18 @@ describe('Insertion Sort', () => {
     expect(sortedNegatives).to.deep.equal([ -567, -3, 0, 2, 4 ])
   })
 
-  it('should sort large arrays', () => {
-    let randomArray = generateRandomNumber(500);
-    
+  it('should sort large arrays (60,000)', () => {
+    let randomArray = generateRandomNumber(60000);
+    let compSorted = [ ...randomArray ].sort((a, b) => a - b);
+
+    expect(insertionSort(randomArray)).to.deep.equal(compSorted);
+  })
+
+  it('should sort an array of letters alphabetically', () => {
+    let letterArray = [ 'f', 't', 'w', 'e', 'a', 'c', 'd' ];
+    let sortedLetters = insertionSort(letterArray);
+
+    expect(sortedLetters).to.deep.equal([ 'a', 'c', 'd', 'e', 'f', 't', 'w' ])
   })
 
 })
