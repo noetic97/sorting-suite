@@ -1,4 +1,4 @@
-import { expect, assert } from 'chai';
+import { expect } from 'chai';
 import bubbleSort from '../scripts/bubbleSort'
 import generateRandomNumber from '../scripts/generateRandomNumber'
 
