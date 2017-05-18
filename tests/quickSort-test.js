@@ -31,8 +31,8 @@ describe('Quick Sort', () => {
     expect(sortedNegatives).to.deep.equal([ -567, -3, 0, 2, 4 ])
   })
 
-  it('should sort large arrays (400,000)', () => {
-    let randomArray = generateRandomNumber(400000);
+  it('should sort large arrays (425,000)', () => {
+    let randomArray = generateRandomNumber(425000);
     let compSorted = [ ...randomArray ].sort((a, b) => a - b);
 
     expect(quickSort(randomArray)).to.deep.equal(compSorted);
