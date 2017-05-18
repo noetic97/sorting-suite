@@ -1,4 +1,4 @@
-function quickSort(array) {
+const quickSort = (array) => {
   let left = [];
   let right = [];
   let pivot = array[0]
@@ -8,17 +8,10 @@ function quickSort(array) {
   }
 
   for (let i = 1; i < array.length; i++) {
-    if (pivot > array[i]) {
-      left.push(array[i])
-    } else {
-      right.push(array[i])
-    }
+    pivot > array[i] ? left.push(array[i]) : right.push(array[i])
   }
 
-  left = quickSort(left);
-  right = quickSort(right);
-
-  return [...left, pivot, ...right]
+  return [...quickSort(left), pivot, ...quickSort(right)]
 }
 
 export default quickSort;

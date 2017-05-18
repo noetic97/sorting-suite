@@ -1,18 +1,18 @@
-function merge(left, right){
-  var result = [],
+const merge = (left, right) => {
+  let result = [],
       lLen = left.length,
       rLen = right.length,
       l = 0,
       r = 0;
-      
+
   while(l < lLen && r < rLen){
      left[l] < right[r] ? result.push(left[l++]) : result.push(right[r++]);
   }
   return result.concat(left.slice(l)).concat(right.slice(r));
 }
 
-function mergeSort(arr){
-   var len = arr.length;
+const mergeSort = (arr) => {
+   let len = arr.length;
    if(len <2)
       return arr;
    var mid = Math.floor(len/2),
